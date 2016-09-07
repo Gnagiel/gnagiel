@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html charset='utf-8' />
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Le site qui sert à rien</title>
+        <link rel="icon" type="image/gif" href="../images/baseball.gif" />
+        <meta property="og:url"           content="https://www.facebook.com/Padedetest/" />
+	</head>
+	<body>
+		<div id="fb-root"></div>
+	<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '1176946892316790',
+		      status     : true,
+		      xfbml      : true,
+		      version    : 'v2.6'
+		    });
+		    FB.api('/113124472034820', function(response) {
+			  console.log(response);
+			});
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.6&appId=1176946892316790";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<script>
+
+			function myFacebookLogin() {
+			  FB.login(function(){}, {scope: 'publish_actions'});
+			}
+		</script>
+        <div id="bloc_page">
+            <header>
+                 <div id="titre">
+                    <h1>Bienvenue!</h1>
+                    <h2>Bonjour {pseudo}</h2>
+                </div>
+                <nav>
+                    <ul id="menu-deroulant">
+                        <li><a href="/req_accueil">Accueil</a></li>
+                        <li><a>Jeux</a>
+                            <ul class="sous-menu">
+                                <li><a href="/debuter">Trivial</a></li>
+                                <li><a href="/debuterNS">Nombre secret</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Exercices</a>
+                            <ul class="sous-menu">
+                                <li><a href="/debuter">Trivial</a></li>
+                                <li><a href="/debuterNS">Nombre secret</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">En cours</a></li>
+                        <li><a href="#">En cours</a></li>
+                    </ul> 
+                </nav>
+            </header>
+			<br />
+
+<div class="fb-page" data-href="https://www.facebook.com/Padedetest/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+<div class="fb-send" data-href="https://www.facebook.com/Padedetest/"></div>
+                <button onclick="myFacebookLogin()">Login with Facebook</button>
+        </div>
+    </body>
+</html>

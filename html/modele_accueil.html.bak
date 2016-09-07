@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <link rel="stylesheet" href="../style/style.css">
+        <title>Le site qui sert à rien</title>
+        <link rel="icon" type="image/png" href="../images/baseball.gif" />
+    </head>
+    <body>
+        <div id="bloc_page">
+
+	<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '1176946892316790',
+		      xfbml      : true,
+		      version    : 'v2.6'
+		    });
+		    FB.api('/113124472034820', function(response) {
+			  console.log(response);
+			});
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+		<script>
+
+			function myFacebookLogin() {
+			  FB.login(function(){}, {scope: 'publish_actions'});
+			}
+		</script>
+
+            <div id="login">
+                <h2>Bienvenue sur le site qui ne sert à rien</h2>
+					
+                <p>{erreur}</p>
+
+                <form action="/req_identifier" method="POST"> 
+                    <input type="text" name="pseudo" value="{pseudo}"> 
+                    <br/>
+                    <input type="password" name="password" value="">
+                    <br/>
+                    <input type="submit" name="action" value="Se connecter">
+                </form>           
+
+                <form action="/req_afficher_formulaire_inscription" method="GET">
+                    <button name="action" value="creer">Créer compte</button>
+                </form>
+                <button onclick="myFacebookLogin()">Login with Facebook</button>
+            </div>
+        </div>    
+    </body>
+</html>

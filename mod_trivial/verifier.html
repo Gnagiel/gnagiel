@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <link rel="stylesheet" href="../style/style.css">
+		<title>Trivial Pursuit</title>
+        <link rel="icon" type="image/png" href="../images/baseball.gif" />
+	</head>
+	<body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre">
+                    <h1>Bienvenue!</h1>
+                    <h2>Bonjour {pseudo}</h2>
+                </div>
+                <nav>
+                    <ul id="menu-deroulant">
+                        <li><a href="/req_accueil">Accueil</a></li>
+                        <li><a>Jeux</a>
+                            <ul class="sous-menu">
+                                <li><a href="/debuter">Trivial</a></li>
+                                <li><a href="/debuterNS">Nombre secret</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Exercices</a>
+                            <ul class="sous-menu">
+                                <li><a href="/debuter">Trivial</a></li>
+                                <li><a href="/debuterNS">Nombre secret</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">En cours</a></li>
+                        <li><a href="#">En cours</a></li>
+                    </ul> 
+                </nav>
+            </header>
+            <div id="bloc_jeux">
+                <p>La question était : {question}</p>
+                <br/>
+                <p>Vous avez répondu : {tareponse}</p>
+                <br/>
+                <p>La bonne réponse est : {reponse} </p>
+                <br/>
+                <p>Votre réponse est {resultat}</p>
+                <p>Votre score {est} {score} point(s)</p>
+                <br/>
+                <form action="/jouer" method="GET" name="jouer">
+                    <input type="submit" value="Cliquez ici pour la question suivante"></input>
+                </form>
+            </div>
+        </div>
+	</body>
+</html>
