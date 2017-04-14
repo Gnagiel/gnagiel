@@ -31,12 +31,12 @@ var req_static = require("./mod_serveur/req_static.js");
 var erreur = require("./mod_serveur/erreur.js");
 var Facebook = require('facebook-node-sdk');
 var Cookies = require('cookies');
-var facebook = new Facebook({ appID: '1176946892316790', secret: '45f96c33fa0681b982696c446b2d43e7' });
+//var facebook = new Facebook({ appID: '1176946892316790', secret: '45f96c33fa0681b982696c446b2d43e7' });
 
-facebook.api('/amachang', function(err, data) {
+/*facebook.api('/amachang', function(err, data) {
   console.log("FB : "+data); // => { id: ... }
   
-});
+});*/
 //-------------------------------------------------------------------------
 // FONCTION DE CALLBACK APPELLEE POUR CHAQUE REQUETE
 //-------------------------------------------------------------------------
